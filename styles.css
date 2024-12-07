@@ -1,0 +1,544 @@
+/* General Reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Dark Theme */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff;          /* Light text */
+}
+
+/* Portfolio Menu Styles */
+.portfolio-menu {
+    background-color: rgb(143, 72, 166); /* Violet menu bar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+}
+
+.portfolio-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.portfolio-menu ul li:not(:last-child)::after {
+    content: "|";
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.portfolio-menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.portfolio-menu ul li a:hover {
+    background-color: #ffffff;
+    color: violet;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+/* Home Section */
+.home-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px; /* Space between image and text */
+}
+
+/* Profile Image */
+.image-container img {
+    width: 400px;
+    height: 400px;
+    border: 3px solid #979494; /* Border matches the text color */
+    object-fit: cover;
+    margin-left: 30%;
+    border-radius: 50%;
+}
+
+/* Name and Designation */
+.details-container {
+    text-align: left; /* Align text to the left */
+    flex: 1;          /* Adjust text container width */
+}
+
+.details-container h1 {
+    font-size: 2.7rem;
+    margin: 10px 0;
+    padding-left: 15%;
+}
+
+.details-container .highlighted-name {
+    color: rgb(236, 88, 29); /* Highlight name in dark red */
+}
+
+.details-container .designation {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    text-shadow: 0 0 0px #ffffff, 0 0 2px #ffffff; /* Throw out effect */
+    padding-left: 15%;
+}
+
+.details-container .description {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    padding-left: 15%;
+    padding-top: 1%;
+    color: rgb(169, 171, 170);
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+    padding-left: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.social-links .social-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0.8); /* Dark theme effect */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2); /* Enlarge logo on hover */
+    filter: brightness(1); /* Brighten image on hover */
+}
+
+/* Education Section */
+.education-section {
+    padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s; /* Smooth fade-in effect */
+}
+
+.education-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.education-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.education-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.education-details {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid violet;
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+}
+
+.education-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.education-details p {
+    margin: 0;
+    font-size: 1rem;
+}
+/* Certification Section */
+.certification-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.certificates-row {
+    display: flex;
+    justify-content: center; /* Center-align certificates */
+    flex-wrap: wrap; /* Enable wrapping for the second row */
+    gap: 20px; /* Spacing between certificates */
+    margin-bottom: 20px; /* Spacing between rows and the button */
+}
+
+.certificate-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+}
+
+.certificate-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.show-more {
+    display: inline-block;
+    margin: 0 auto; /* Center the button */
+    background-color: violet;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.show-more:hover {
+    background-color: darkviolet;
+    transform: scale(1.05);
+}
+
+
+/* Internship Section */
+.internship-row {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.internship-row img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Projects Section */
+.projects-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1e1e2f; /* Dark background */
+    color: #ffffff; /* White text for better contrast */
+}
+
+/* Project Container */
+.project-container {
+    display: flex;
+    flex-direction: column; /* Ensure rows are stacked */
+    gap: 15px; /* Space between rows */
+    align-items: center; /* Center the rows horizontally */
+}
+
+/* Individual Project Row */
+.project-row {
+    background-color: #333346; /* Darker background for rows */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Ensure a uniform width for rows */
+    max-width: 800px; /* Limit the maximum width */
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Project Row */
+.project-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Title Style */
+.project-title {
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    color: #f39c12; /* Highlighted text color */
+    line-height: 1.8; /* Better readability */
+    margin: 0;
+}
+
+/* Typewriter Title */
+#typewriter-title {
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f39c12;
+    margin-bottom: 30px;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1e1e2f;
+    color: #ffffff;
+}
+
+.skills-container,
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill, .tool {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.skill p, .tool p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.skill-bar, .tool-bar {
+    width: 100%;
+    height: 20px; /* Increased height for better visibility */
+    background-color: #333346;
+    border-radius: 10px; /* Rounded edges */
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: rgb(228, 183, 3); /* Updated color for tools */
+    border-radius: 10px;
+    width: 0;
+    animation: fillProgress 2.5s ease-in-out forwards; /* Smooth animation */
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: rgb(236, 88, 29);
+}
+
+.contact-section h3 {
+    color: rgb(236, 88, 29);
+}
+
+/* Contact Boxes Layout */
+.contact-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Each Contact Row Styling */
+.contact-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-color: #bb70d8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 500px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.contact-title {
+    color: rgb(247, 204, 12);
+    font-size: 22px;
+    width: 80px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Make Image clickable */
+.contact-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Styling for the inputs (phone, email, address) to make them clickable */
+.contact-link {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Hover effect for contact links */
+.contact-link:hover {
+    color: rgb(11, 233, 241);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .contact-row {
+        width: 90%;
+    }
+}
+/* Keyframes for throw-out animation */
+@keyframes throw-out {
+    0% {
+        transform: translateX(-100%); /* Starts from the left */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(10px); /* Slight movement */
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(0); /* Final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Apply throw-out animation to the highlighted name */
+.highlighted-name {
+    display: inline-block;
+    animation: throw-out 1.5s ease-out forwards;
+    font-weight: bold;
+    color: rgb(236, 88, 29); /* Orange color for emphasis */
+}
+
+/* Optional: If you want the text to stay visible without any further movement, you can set the final position explicitly. */
+/* Keyframes for wave-in effect */
+@keyframes wave-in {
+    0% {
+        transform: translateX(-100%) rotate(20deg); /* Starts from the left and rotated */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(15px) rotate(-10deg); /* Moves and rotates back */
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg); /* Final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Apply wave-in animation to certificates */
+.certificate-image {
+    display: inline-block;
+    animation: wave-in 1s ease-out forwards;
+    opacity: 0; /* Initially invisible */
+    margin: 10px;
+    transform-origin: center;
+}
+
+/* Optionally stagger the animation for each certificate */
+.certificate-image:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.certificate-image:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.certificate-image:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.certificate-image:nth-child(4) {
+    animation-delay: 0.4s;
+}
+/* Add more delay steps as necessary for other certificates */
+
+/* Keyframes for wave-in effect */
+@keyframes wave-in {
+    0% {
+        transform: translateX(-100%) rotate(20deg); /* Starts from the left and rotated */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(15px) rotate(-10deg); /* Moves and rotates back */
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg); /* Final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Apply wave-in animation to certificates */
+.certificate-image {
+    display: inline-block;
+    opacity: 0; /* Initially invisible */
+    margin: 10px;
+    transform-origin: center;
+}
+
+/* The class to trigger the wave-in effect */
+.certificate-image.wave-in {
+    animation: wave-in 1s ease-out forwards;
+}
+
+
+
