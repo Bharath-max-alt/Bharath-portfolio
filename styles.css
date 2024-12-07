@@ -587,4 +587,45 @@ html {
 }
 
 
+/* Responsive Design for Mobile - Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .contact-section h2, .contact-section h3 {
+        font-size: 1.5rem; /* Adjust heading font size */
+    }
+
+    .contact-boxes {
+        flex-direction: column; /* Stack contact rows vertically */
+        gap: 15px; /* Add space between rows */
+    }
+
+    .contact-row {
+        flex-direction: column; /* Stack elements within each row */
+        align-items: flex-start; /* Align items to the start */
+        padding: 15px; /* Add uniform padding */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .contact-title {
+        width: auto; /* Allow flexible width */
+        font-size: 1.2rem; /* Adjust title font size */
+    }
+
+    .contact-item {
+        gap: 5px; /* Reduce gap between icon and text */
+    }
+
+    .contact-item img {
+        width: 30px; /* Smaller icon size */
+        height: 30px;
+    }
+
+    .contact-link {
+        font-size: 14px; /* Adjust link font size */
+    }
+}
+
 
