@@ -108,6 +108,52 @@ body {
     color: rgb(169, 171, 170);
 }
 
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px;
+        gap: 20px; /* Adjust spacing between items */
+    }
+
+    .image-container img {
+        width: 200px; /* Reduce image size */
+        height: 200px;
+        margin-left: 0; /* Center-align the image */
+    }
+
+    .details-container {
+        text-align: center; /* Center-align text */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .details-container h1 {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+        padding-left: 0;
+    }
+
+    .details-container .designation {
+        font-size: 1.2rem; /* Adjust designation font size */
+        padding-left: 0;
+    }
+
+    .details-container .description {
+        font-size: 0.9rem; /* Adjust description font size */
+        padding: 10px 20px; /* Add uniform padding */
+    }
+
+    .social-links {
+        padding-left: 0; /* Center social links */
+        justify-content: center; /* Align links horizontally */
+    }
+
+    .social-links img {
+        width: 30px; /* Smaller icons */
+        height: 30px;
+    }
+}
+
+
 /* Social Links */
 .social-links {
     margin-top: 20px;
