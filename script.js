@@ -38,9 +38,9 @@ const showMoreButton = document.getElementById("showMoreButton");
 const certificates = [
     "certificates/certi1.jpg", "certificates/certi13.jpg", "certificates/certi8.jpg", "certificates/certi10.jpg",
     "certificates/certi5.jpg", "certificates/certi6.jpg", "certificates/certi7.jpg", "certificates/certi3.jpg",
-    "certificates/certi9.jpg", "certificates/certi4.jpg", "certificates/certi11.jpg", "certificates/certi12.jpg",
+    "certificates/certi25.jpg", "certificates/certi4.jpg", "certificates/certi11.jpg", "certificates/certi12.jpg",
     "certificates/certi2.jpg", "certificates/certi14.jpg", "certificates/certi15.jpg", "certificates/certi16.jpg",
-    "certificates/certi17.jpg", "certificates/certi18.jpg", "certificates/certi19.jpg", "certificates/certi20.jpg",
+    "certificates/certi22.jpg", "certificates/certi18.jpg", "certificates/certi19.jpg", "certificates/certi20.jpg",
 ];
 
 let certificatesToShow = 7;
