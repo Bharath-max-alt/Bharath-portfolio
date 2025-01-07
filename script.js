@@ -38,9 +38,9 @@ const showMoreButton = document.getElementById("showMoreButton");
 const certificates = [
     "certificates/certi1.jpg", "certificates/certi13.jpg", "certificates/certi8.jpg", "certificates/certi10.jpg",
     "certificates/certi5.jpg", "certificates/certi6.jpg", "certificates/certi7.jpg", "certificates/certi3.jpg",
-    "certificates/certi25.jpg", "certificates/certi4.jpg", "certificates/certi11.jpg", "certificates/certi12.jpg",
+    "certificates/certi9.jpg", "certificates/certi4.jpg", "certificates/certi11.jpg", "certificates/certi12.jpg",
     "certificates/certi2.jpg", "certificates/certi14.jpg", "certificates/certi15.jpg", "certificates/certi16.jpg",
-    "certificates/certi22.jpg", "certificates/certi18.jpg", "certificates/certi19.jpg", "certificates/certi20.jpg",
+    "certificates/certi17.jpg", "certificates/certi18.jpg", "certificates/certi19.jpg", "certificates/certi20.jpg",
 ];
 
 let certificatesToShow = 7;
@@ -141,6 +141,15 @@ document.addEventListener("scroll", function () {
     });
 });
 
+function showMore(id) {
+    const textElement = document.getElementById(`text-${id}`);
+    if (textElement.style.display === "block") {
+        textElement.style.display = "none";
+    } else {
+        textElement.style.display = "block";
+    }
+}
+
 // Add CSS transitions for smooth effects
 const style = document.createElement("style");
 style.textContent = `
@@ -164,3 +173,21 @@ style.textContent = `
 document.head.appendChild(style);
 
 
+  // JavaScript to handle form submission
+  document.getElementById('send-message-btn').addEventListener('click', () => {
+    const name = document.getElementById('user-name').value;
+    const email = document.getElementById('user-email').value;
+    const message = document.getElementById('user-message').value;
+
+    if (name && email && message) {
+        // Construct WhatsApp URL
+        const whatsappUrl = `https://wa.me/919360504959?text=${encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+        )}`;
+
+        // Redirect to WhatsApp
+        window.open(whatsappUrl, '_blank');
+    } else {
+        alert('Please fill out all fields.');
+    }
+});
