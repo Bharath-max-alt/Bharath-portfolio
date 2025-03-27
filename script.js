@@ -71,7 +71,10 @@ loadCertificates();
 // Project Titles
 const projectTitles = [
     "Developing an AI-based interactive chatbot or virtual assistant for the Department of Justice’s Website.",
-    "Clone of Facebook application.",
+    "Developing a User interface for the mobile app by using Figma",
+    "Develop an UI for Food Delivery App using Figma",
+    "Pitch point Application using Front End Technologies"
+    "Clone of Facebook application",
     "Music player application using Python."
 ];
 
