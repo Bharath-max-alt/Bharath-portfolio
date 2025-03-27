@@ -73,7 +73,7 @@ const projectTitles = [
     "Developing an AI-based interactive chatbot or virtual assistant for the Department of Justice’s Website.",
     "Developing a User interface for the mobile app by using Figma",
     "Develop an UI for Food Delivery App using Figma",
-    "Pitch point Application using Front End Technologies"
+    "Pitch point Application using Front End Technologies",
     "Clone of Facebook application",
     "Music player application using Python."
 ];
